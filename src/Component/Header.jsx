@@ -46,24 +46,24 @@ const Header = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink
+            {user?.uid && <NavLink
               to="/wallet"
               aria-label="Product pricing"
               title="Product pricing"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
               Wallet
-            </NavLink>
+            </NavLink>}
           </li>
           <li>
-            <NavLink
+            {!user?.uid && <NavLink
               to="/login"
               aria-label="About us"
               title="About us"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
               Login
-            </NavLink>
+            </NavLink>}
           </li>
           <li>
             {!user?.uid ? <Link
