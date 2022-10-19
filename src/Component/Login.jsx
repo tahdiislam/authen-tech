@@ -1,12 +1,31 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../UserContext/UserContext';
 
 const Login = () => {
+    const { logIn } = useContext(AuthContext)
+    // log in with email and password
+    const handleSubmitForm = event => {
+        event.preventDefault()
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(email, password);
+        // log in with email and password
+        logIn(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch(error => {
+                console.error(error.message);
+            })
+    }
     return (
         <div className='flex justify-center i'>
             <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-50 text-gray-800 border border-gray-300">
                 <h1 className="text-4xl font-bold text-center">Log In</h1>
-                <form noValidate="" action="" className="space-y-6 ng-untouched ng-pristine ng-valid">
+                <form onSubmit={handleSubmitForm} noValidate="" action="" className="space-y-6 ng-untouched ng-pristine ng-valid">
                     <div className="space-y-1 text-sm">
                         <label htmlFor="email" className="block text-gray-600">Email</label>
                         <input type="email" name="email" id="email" placeholder="email" className="border border-gray-300 w-full px-4 py-3 rounded-md bg-gray-50 text-gray-800 focus:border-purple-600" />
