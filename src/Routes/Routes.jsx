@@ -6,6 +6,7 @@ import Profile from "../Component/Profile";
 import Register from "../Component/Register";
 import Wallet from "../Component/Wallet";
 import Main from "../Layout/Main";
+import PrivateRoute from "./PrivateRoute";
 
 
 export const router = createBrowserRouter([
@@ -13,8 +14,8 @@ export const router = createBrowserRouter([
     { path: '*', element: <ErrorPage />, },
     {path: '/', element: <Home/>},
     {path: '/home', element: <Home/>},
-    {path: '/profile', element: <Profile/>},
-    {path: '/wallet', element: <Wallet/>},
+    {path: '/profile', element: <PrivateRoute><Profile/></PrivateRoute>},
+    {path: '/wallet', element: <PrivateRoute><Wallet/></PrivateRoute>},
     {path: '/login', element: <Login/>},
     {path: '/register', element: <Register/>},
   ]}
