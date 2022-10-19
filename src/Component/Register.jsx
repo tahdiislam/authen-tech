@@ -19,7 +19,7 @@ const Register = () => {
                         <label htmlFor="password" className="block text-gray-600">Password</label>
                         <input type="password" name="password" id="password" placeholder="Password" className="border w-full px-4 py-3 rounded-md border-gray-300 bg-gray-50 text-gray-800 focus:border-purple-600" />
                     </div>
-                    <button className="block w-full p-3 text-center rounded-sm text-gray-50 bg-purple-600">Sign in</button>
+                    <button className="block w-full p-3 text-center rounded-sm text-gray-50 bg-purple-600">Sign Up</button>
                 </form>
                 <div className="flex items-center pt-4 space-x-1">
                     <div className="flex-1 h-px sm:w-16 bg-gray-300"></div>
