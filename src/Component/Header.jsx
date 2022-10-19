@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import logo from '../assets/logo192.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,6 +14,7 @@ const Header = () => {
           title="Company"
           className="inline-flex items-center"
         >
+          <img className="h-9 mr-1 border border-gray-400 rounded-full p-1" src={logo} alt="Logo Image" />
           <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
             AuthenTech
           </span>
