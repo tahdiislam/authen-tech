@@ -20,6 +20,7 @@ const Register = () => {
                 console.log(user);
                 setName(name)
                 emailVerification()
+                form.reset()
             })
             .catch(error => {
                 console.error(error.message);
