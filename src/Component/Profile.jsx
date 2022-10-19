@@ -24,7 +24,7 @@ const Profile = () => {
                             <span className="text-gray-600">{user?.email}</span>
                         </span>
                         <span className="flex items-center space-x-2">
-                            <span className="text-gray-600">ID:{user?.uid}</span>
+                            <span className=" text-gray-600">ID:{user?.uid}</span>
                         </span>
                     </div>
                 </div>
